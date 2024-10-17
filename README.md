@@ -1,16 +1,21 @@
 # NishasCreativeResume
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
-This is a work-in-progress project - till I am satisfied with my understanding of Inputs, Outputs, Directives, Routing and Events.
-I have divided my creative-resume project into following sections-
-data folder has the most important file of all cv-data.ts - the file that contains all the data to fill the different sections of the resume. This file contains cvData which is an array structure. 
-cv - main component that holds all the other components
-header - contains Name, title, contact details
-education - displays education 
-experience - displays experience
-references - an interactive element - when you click on the reference it will show the actual testimonial
-skills - linked to the references
-footer - social media links, download CV link
+
+## Description
+This is a work-in-progress project - till I am satisfied with my understanding of Inputs, Outputs, Directives, Routing and Events.   
+
+I have divided my creative-resume project into following sections-   
+
+data folder has the most important file of all cv-data.ts - the file that contains all the data to fill the different sections of the resume. This file contains cvData which is an array structure.   
+
+cv - main component that holds all the other components  
+header - contains Name, title, contact details   
+education - displays education    
+experience - displays experience   
+references - an interactive element - when you click on the reference it will show the actual testimonial    
+skills - linked to the references    
+footer - social media links, download CV link    
 
 ## Development server
 
