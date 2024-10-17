@@ -1,6 +1,6 @@
 export const cvData = {
     header: {
-      name: "Nisha Poyarekar",
+      name: "Nisha Menon-Poyarekar",
       title: "Full Stack Developer",
       email: "nisha.s.menon@gmail.com",
       phone: "123-456-7890",
