@@ -1,0 +1,39 @@
+<h3>References</h3>
+
+<div *ngFor="let ref of references">
+    <p>{{ ref.details }}</p>
+    - <span> {{ ref.rname }}, {{ ref.role }}</span>
+  </div>
+
+  <form [formGroup]="referenceForm" (ngSubmit)="addSkill()">
+    <div>
+      <input formControlName="skillset" placeholder="Skillset"/>
+      <div *ngIf="referenceForm.get('skillset')?.invalid && referenceForm.get('skillset')?.touched">
+        Skillset is required.
+      </div>
+    </div>
+    <div>
+      <input formControlName="rating" type="number" placeholder="Rating" min="1" max="5"/>
+      <div *ngIf="referenceForm.get('rating')?.invalid && referenceForm.get('rating')?.touched">
+        Rating must be between 1 and 5.
+      </div>
+    </div>
+    <div>
+      <textarea formControlName="feedback" placeholder="Feedback"></textarea>
+      <div *ngIf="referenceForm.get('feedback')?.invalid && referenceForm.get('feedback')?.touched">
+        Feedback is required.
+      </div>
+    </div>
+    <button type="submit" [disabled]="referenceForm.invalid">Add Skill</button>
+  </form>
+  
+  <h3>Skills</h3>
+  <ul>
+    <li *ngFor="let skill of skills">{{ skill.skill }}: {{ skill.rating }}</li>
+  </ul>
+  
+  <h3>References</h3>
+  <ul>
+    <li *ngFor="let ref of references">{{ ref.skill }}: {{ ref.feedback }}</li>
+  </ul>
+  

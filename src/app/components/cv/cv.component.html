@@ -1,0 +1,10 @@
+
+<div class="cv">
+    <app-header [headerData]="header"></app-header>
+    <hr>
+    <app-skills [skillSet]="skills" (skillClicked)="onSkillSelected($event)"></app-skills>
+    <app-experience [experiences]="experience"></app-experience>
+    <app-education [education]="education"></app-education>
+    <app-references [references]="references"></app-references>
+    <app-footer [footer]="footer"></app-footer>
+  </div>
