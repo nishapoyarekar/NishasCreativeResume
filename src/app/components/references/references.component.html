@@ -1,13 +1,14 @@
 <h3>References</h3>
-<div class="centergen">(Click on each reference for testimonials)</div>
 
-<div *ngFor="let reference of referenceList" (click)="onReferenceClick(reference)" class="centergen">
-  <div (click)="toggleReferenceDetails(reference)">
-    <h4>{{ reference.rname }} - {{ reference.role }}</h4>
+  <div *ngFor="let reference of referenceList" class="reference-card">
+    <div (click)="toggleReferenceDetails(reference)">
+      <h4>{{ reference.rname }} - {{ reference.role }}</h4>
+    </div>
+  
+    <div *ngIf="selectedReference === reference" class="reference-details">
+      <p>{{ reference.details }}</p>
+    </div>
   </div>
-
-
-</div>
 
   
   

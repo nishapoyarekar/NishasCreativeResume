@@ -1,5 +1,7 @@
 
 import { Component, Input, Output,EventEmitter} from '@angular/core';
+import { Reference } from './references.model';
+import { ReferenceService } from 'src/app/services/reference.service';
 
 @Component({
   selector: 'app-references',
@@ -7,20 +9,24 @@ import { Component, Input, Output,EventEmitter} from '@angular/core';
   styleUrls: ['./references.component.css'],
 })
 export class ReferencesComponent {
-  @Input() referenceList: any[] = [];
+  @Input() referenceList: Reference[] = [];;
   @Output() referenceClicked = new EventEmitter<any>();
+
+  constructor(private referenceService: ReferenceService) {}
   
   // Track the currently selected reference for displaying more details
-  selectedReference: any = null;
+  selectedReference: Reference | null = null;
 
-  // Function to toggle the display of additional details for a reference
-  toggleReferenceDetails(reference: any) {
-    // If the selected reference is already clicked, hide it
+ 
+  toggleReferenceDetails(reference: Reference) {
+    
     if (this.selectedReference === reference) {
       this.selectedReference = null;
     } else {
       this.selectedReference = reference;
+      
     }
+    this.referenceService.selectReference(reference);
   }
 
   onReferenceClick(reference: any) {
