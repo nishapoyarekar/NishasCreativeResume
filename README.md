@@ -13,8 +13,8 @@ cv - main component that holds all the other components
 header - contains Name, title, contact details   
 education - displays education    
 experience - displays experience   
-references - an interactive element - when you click on the reference it will show the actual testimonial    
-skills - linked to the references    
+references - an interactive element - when you click on the reference it will show the testimonial      
+skills - Displays a useless pop-up as of now     
 footer - social media links, download CV link    
 
 ## Development server

@@ -12,10 +12,15 @@ export class CvComponent {
   skills = cvData.skills;
   education = cvData.education;
   references = cvData.references;
+  selectedReference: any;
   footer = cvData.footer;
 
   onSkillSelected(skill: string) {
-    alert(`You clicked on: ${skill}`);
+    alert(`You clicked on: ${skill}`); //Shameful--change this fast
     
+  }
+
+  onReferenceSelected(reference: any) {
+    this.selectedReference = reference;
   }
 }

@@ -5,6 +5,12 @@
     <app-skills [skillSet]="skills" (skillClicked)="onSkillSelected($event)"></app-skills>
     <app-experience [experiences]="experience"></app-experience>
     <app-education [education]="education"></app-education>
-    <app-references [references]="references"></app-references>
+    <app-references [referenceList]="references" (referenceClicked)="onReferenceSelected($event)"></app-references>
+
+<div *ngIf="selectedReference" class="centergen">
+  <h3>What {{ selectedReference.rname }} has to say about her skills</h3>
+  <p> {{ selectedReference.details }}</p>
+</div>
+
     <app-footer [footer]="footer"></app-footer>
   </div>
